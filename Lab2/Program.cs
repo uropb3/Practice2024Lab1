@@ -9,12 +9,10 @@ internal class Program
 
     private static void Main(string[] args)
     {
-        var person = new Person
-        {
-            FirstName = "Игорь",
-            LastName = "Полеводин",
-            Patronymic = "Юрьевич"
-        };
+        var person = new Person(
+            firstName: "Игорь", 
+            lastName: "Полеводин", 
+            patronymic: "Юрьевич");
 
         var invitationSender = new InvitationSender();
         invitationSender.SendInvitation(person);
